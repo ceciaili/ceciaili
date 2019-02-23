@@ -25,6 +25,12 @@ body {padding-top:50px}
 <!--Since the activities are ordered by number, when the person has done the activity they choose the number that represents the activity-->
 <input type="button" id="button3" value="Activity Done" onclick="erase_from_list();"></input>
 <!--Here the activity is erased and the array has a new order of numbers-->
+<p>Choose activity that needs to be edit: </p>
+<input type="number" id="editnum"></input>
+<!--Here the person choose the number that they want to add-->
+<p>Edit: </p>
+<input type="text" id="editact"></input>
+<input type="button" id="button4" value="Edit" onclick="edit_from_list();"></input>
 <br/>
 <br/>
 <input type="button" id="button2" value="Display" onclick="display_array();"></input>
