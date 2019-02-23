@@ -19,7 +19,17 @@ function erase_from_list()
 	{
 		array.splice(index-1, 1);
 	}
+	console.log(array)
 	//document.getElementById("Result").innerHTML
+}
+
+function edit_from_list()
+{
+	
+	console.log(array)
+	var index = document.getElementById("editnum").value;
+	array[index-1] = document.getElementById("editact").value;
+	console.log(array)
 }
 
 function display_array()
