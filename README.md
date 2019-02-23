@@ -36,3 +36,47 @@ body {padding-top:50px}
 body {padding-top:50px}
 </style>
 </html>
+
+
+
+
+
+
+var x = 0;
+var array = Array();
+<!--Here I created my array
+
+function add_element_to_array()
+<!--this is function is used in the add button, in here I add the item the person wrote in the text-->
+{
+ array[x] = document.getElementById("dotext").value;
+ alert(array[x] + " was added to your To-do List");
+ x++;
+ document.getElementById("dotext").value = "";
+}
+
+function erase_from_list()
+<!--this function is used in the activity done button, where the program reads the array and get number from the number box the person chose and erase the item accordingly-->
+{
+	
+	//array = document.getElementById("Result");
+	console.log(array)
+	var index = document.getElementById("someid").value;
+	if (index > -1) 
+	{
+		array.splice(index-1, 1);
+	}
+	//document.getElementById("Result").innerHTML
+}
+
+function display_array()
+<!--Here is where the program creates a readable list and it keeps adding information to it with the use of the for, right at the end the result is connected to the button of display so the user can see the list printed-->
+{
+   var e = "<hr/>";   
+    
+   for (var y=0; y<array.length; y++)
+   {
+     e += y+1 + ". " + array[y] + "<br/>";
+   }
+   document.getElementById("Result").innerHTML = e;
+}
